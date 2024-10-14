@@ -1,18 +1,21 @@
 import pygame
-pygame.init()
-size = [800, 600]
-screen = pygame.display.set_mode(size)
-clock = pygame.time.Clock()
 
-running = True
-while running:
+pygame.init()
+
+screen = pygame.display.set_mode((1200, 800))
+pygame.display.set_caption("GitGame")
+#icon = pygame.image.load("")
+#pygame.display.set_icon(icon)
+
+
+run = True
+while run:
+
+    screen.fill((197, 252, 252))
+
+    pygame.display.flip()
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
-                # пишем свой код
-    # обновляем значения
-    screen.fill((200, 100, 0))
-    # рисуем
-    pygame.display.flip()
-    clock.tick(30)
-pygame.quit()
+            run = False
+            pygame.quit()
